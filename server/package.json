@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Legacy Project Codeworks extends Tyler Wells Solo Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "[testing",
+    "typescript",
+    "refactor",
+    "add_features"
+  ],
+  "author": "Michael Kaib, Ammar Khomusi, Nicolas Ogno",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.16"
+  }
+}
