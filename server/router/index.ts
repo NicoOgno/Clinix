@@ -14,4 +14,4 @@ router.get("/test", () => {
 
 router.post("/", patients.postPatient);
 
-module.exports = router;
+export default router;

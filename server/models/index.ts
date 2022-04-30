@@ -9,4 +9,4 @@ mongoose.connect(myDB, () => {
   console.log("connected to mongodb " + myDB);
 });
 
-module.exports = mongoose;
+export default mongoose;

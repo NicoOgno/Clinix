@@ -1,10 +1,10 @@
 "use strict";
 
-const express = require('express'); // require the express server
+import express from "express"; // require the express server
 const cors = require("cors"); // require cors
 const app = express(); // instantiate the server
-const port = 3001; // define the port number
-const router = require("./router/index.js"); // import the router file from the router folder
+const port: number = 3001; // define the port number
+import router from './router/index' // import the router file from the router folder
 
 app.use(cors()); // turn on cors
 

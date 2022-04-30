@@ -1,0 +1,1 @@
+To compile command: npx tsc; to run server command: npm start;
