@@ -1,17 +1,17 @@
 "use strict";
 
-const express = require("express"); // require the express server
-const cors = require("cors"); // require cors
-const app = express(); // instantiate the server
-const port = 3001; // define the port number
-const router = require("./router/index.js"); // import the router file from the router folder
+const express = require("express"); // require express
 
-app.use(cors()); // turn on cors
+const router = express.Router(); // instantiate the router (needs capital R)
 
-app.use(express.json()); // turn on the body parser which allows us to receive json messages
+const patients = require("../controllers/patients");
 
-app.use(router); // turn on the router
+console.log("Line 9");
 
-app.listen(port, () => {
-  console.log(`WE ARE NOW LISTENING ON PORT # ${port}`);
-}); // turn on the server at the defined port number
+router.get("/test", () => {
+  console.log("WE GOT A GET");
+});
+
+router.post("/", patients.postPatient);
+
+module.exports = router;
