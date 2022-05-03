@@ -10,45 +10,45 @@ import logOut from "../../images/LogOut.png";
 
 export default function SideBar() {
   return (
-    <nav class="nav-bar">
-      <img src={logo} alt="chosen medical related logo" class="logo-img" />
+    <nav className="nav-bar">
+      <img src={logo} alt="chosen medical related logo" className="logo-img" />
 
-      <div class="nav-bar-links">
+      <div className="nav-bar-links">
         <ul>
           <li>
             <a href="#">
-              <img src={home} alt="" class="icon-img" />
-              <span class="nav-name">Home</span>
+              <img src={home} alt="" className="icon-img" />
+              <span className="nav-name">Home</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={schedule} alt="" class="icon-img" />
-              <span class="nav-name">Schedule</span>
+              <img src={schedule} alt="" className="icon-img" />
+              <span className="nav-name">Schedule</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={patients} alt="" class="icon-img" />
-              <span class="nav-name">Patients</span>
+              <img src={patients} alt="" className="icon-img" />
+              <span className="nav-name">Patients</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={settings} alt="" class="icon-img" />
-              <span class="nav-name">Settings</span>
+              <img src={settings} alt="" className="icon-img" />
+              <span className="nav-name">Settings</span>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src={help} alt="" class="icon-img" />
-              <span class="nav-name">Help</span>
+              <img src={help} alt="" className="icon-img" />
+              <span className="nav-name">Help</span>
             </a>
           </li>
-          <li class="logout">
+          <li className="logout">
             <a href="#">
-              <img src={logOut} alt="" class="icon-img" />
-              <span class="nav-name">Log out</span>
+              <img src={logOut} alt="" className="icon-img" />
+              <span className="nav-name">Log out</span>
             </a>
           </li>
         </ul>

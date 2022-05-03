@@ -1,21 +1,32 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import "./style.css";
 import { patientService } from "../../services/patientService";
 import back from "../../images/left-arrow.png";
 
-export default function CreateNewPatient({ toggler }) {
-  const firstName = useRef();
-  const lastName = useRef();
-  const cpf = useRef();
-  const insurance = useRef();
+interface Props {
+  toggler: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+interface NewPatient {
+  firstName: string | undefined,
+  lastName: string | undefined,
+  cpf: string | undefined,
+  insurance: string | undefined,
+}
+
+const CreateNewPatient: React.FC<Props> = ({ toggler }) => {
+  const firstName = useRef<HTMLInputElement>(null);
+  const lastName = useRef<HTMLInputElement>(null);
+  const cpf = useRef<HTMLInputElement>(null);
+  const insurance = useRef<HTMLInputElement>(null);
 
   function handleAddPatient() {
-    const first = firstName.current.value;
-    const last = lastName.current.value;
-    const id = cpf.current.value;
-    const seguro = insurance.current.value;
+    const first = firstName.current?.value;
+    const last = lastName.current?.value;
+    const id = cpf.current?.value;
+    const seguro = insurance.current?.value;
 
-    const newPatient = {
+    const newPatient: NewPatient = {
       firstName: first,
       lastName: last,
       cpf: id,
@@ -26,14 +37,14 @@ export default function CreateNewPatient({ toggler }) {
   }
 
   return (
-    <div class="new-patient-container">
+    <div className="new-patient-container">
       <img
         src={back}
         alt="back button"
-        class="back-arrow"
+        className="back-arrow"
         onClick={() => toggler(false)}
       />
-      <div class="new-form">
+      <div className="new-form">
         <div className="input-group">
           <label htmlFor="first-name">First Name</label>
           <input name="first-name" ref={firstName} />
@@ -52,7 +63,7 @@ export default function CreateNewPatient({ toggler }) {
         </div>
         <div className="input-group">
           <button
-            class="submission-button"
+            className="submission-button"
             type="button"
             onClick={handleAddPatient}
           >
@@ -63,3 +74,5 @@ export default function CreateNewPatient({ toggler }) {
     </div>
   );
 }
+
+export default CreateNewPatient;

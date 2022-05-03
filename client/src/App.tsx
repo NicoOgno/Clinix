@@ -1,3 +1,4 @@
+import React from "react";
 import SideBar from "./components/SideBar/SideBar";
 import TodaysPatients from "./components/TodaysPatients/TodaysPatients";
 import ApptFirstScreen from "./components/ApptFirstScreen/ApptFirstScreen";
@@ -6,19 +7,19 @@ import ApptConsult from "./components/ApptConsult/ApptConsult";
 function App() {
   return (
     <div className="container">
-      <div class="side-bar-container">
+      <div className="side-bar-container">
         <SideBar />
       </div>
-      <div class="sub-container">
-        <div class="top-container">
-          <div class="top-left-container">
+      <div className="sub-container">
+        <div className="top-container">
+          <div className="top-left-container">
             <ApptFirstScreen />
           </div>
-          <div class="top-right-container">
+          <div className="top-right-container">
             <ApptConsult />
           </div>
         </div>
-        <div class="bottom-container">
+        <div className="bottom-container">
           <TodaysPatients />
         </div>
       </div>

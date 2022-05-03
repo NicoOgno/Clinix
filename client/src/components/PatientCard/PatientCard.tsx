@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 // import juan from "../../images/Juan.png";
 
-export default function PatientCard() {
+const PatientCard: React.FC = () => {
   return <div className="card-container"></div>;
 }
+
+export default PatientCard;

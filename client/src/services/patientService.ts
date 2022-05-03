@@ -7,7 +7,14 @@ function pullPatients() {
     .catch((e) => e);
 }
 
-function postPatient(event) {
+interface Event {
+  firstName: string | undefined,
+  lastName: string | undefined,
+  cpf: string | undefined,
+  insurance: string | undefined,
+}
+
+function postPatient(event: Event) {
   return fetch(`${url}/`, {
     method: "POST",
     // mode: "cors",
